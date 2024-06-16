@@ -7,8 +7,6 @@ import { selectAdverts } from '../../redux/advert/selectors';
 const CatalogList = () => {
   const catalog = useSelector(selectAdverts);
 
-  console.log(catalog);
-
   return (
     <ul className={css.itemCard}>
       {catalog.map(item => {

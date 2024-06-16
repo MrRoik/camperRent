@@ -9,20 +9,20 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+//import storage from 'redux-persist/lib/storage';
 import advertsReducer from './advert/advertSlice';
-import filtersReducer from './advert/filtersSlise';
+//import filtersReducer from './advert/filtersSlise';
 
-const advertsPersistConfig = {
-  key: 'advertsData',
-  storage,
-  whitelist: ['favorites'],
-};
+//const advertsPersistConfig = {
+//  key: 'advertsData',
+//  storage,
+//  whitelist: ['favorites'],
+//};
 
 export const store = configureStore({
   reducer: {
-    advertsData: persistReducer(advertsPersistConfig, advertsReducer),
-    filters: filtersReducer.filtersReducer,
+    //advertsData: persistReducer(advertsPersistConfig, advertsReducer),
+    //filters: filtersReducer.filtersReducer,
     adverts: advertsReducer.advertsReducer,
   },
   middleware: getDefaultMiddleware =>

@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import { lazy } from 'react';
+import { lazy, useEffect } from 'react';
 import { Layout } from './Layout';
-//import adverts from '../../adverts.json';
+import { useDispatch } from 'react-redux';
+import { fetchAdverts } from '../redux/advert/operations';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const CatalogPage = lazy(() => import('../pages/CatalogPage'));
@@ -9,6 +10,12 @@ const FavoritesPage = lazy(() => import('../pages/FavoritesPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAdverts());
+  }, [dispatch]);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

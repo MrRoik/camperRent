@@ -10,10 +10,10 @@ const buildLinkClass = ({ isActive }) => {
 export const AppBar = () => {
   return (
     <header className={css.header}>
-      <div className={css.box_logo}>
-        <GiSurferVan size="40" />
+      <NavLink className={css.box_logo} to="/">
+        <GiSurferVan className={css.logo_pic} size="40" />
         <p className={css.logo}>Camper Rent</p>
-      </div>
+      </NavLink>
 
       <nav className={css.nav}>
         <NavLink to="/" className={buildLinkClass}>

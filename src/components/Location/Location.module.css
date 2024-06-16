@@ -1,0 +1,21 @@
+.text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--primary-grey-color);
+    margin-block-end: 14px;
+    }
+
+    .input {
+        border-radius: 10px;
+border: none;
+width: 94%;
+padding-inline-start: 18px;
+height: 56px;
+background: var(--primary-input-color);
+margin-block-end: 34px;
+color: var(--primary-black-color);
+
+font-size: 16px;
+line-height: 1.25;
+    }

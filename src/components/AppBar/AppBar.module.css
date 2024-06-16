@@ -5,7 +5,8 @@
     gap: 12px;
     padding: 8px 0;
     margin-bottom: 16px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--primary-grey-color);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   }
   
   .nav {
@@ -17,11 +18,12 @@ display: flex;
 flex-direction: row;
 align-items: center;
 gap: 12px;
+color: var(--primary-button-color);
   }
 
   .logo {
     font-weight: 700;
-    font-size: 25px;
+    font-size: 12px;
     margin: 0;
   }
   
@@ -35,6 +37,12 @@ gap: 12px;
   
   .active {
     color: white;
-    background-color: orangered;
+    background-color: var(--primary-button-color);
   }
   
+
+  @media only screen and (min-width: 768px) {
+    .logo {
+      font-size: 26px;
+    }
+  }

@@ -1,35 +1,41 @@
 import css from './Van.module.css';
 import Button from '../Button/Button';
 import icons from '../../images/icons.svg';
-import { FaStar } from 'react-icons/fa';
-import { SlLocationPin } from 'react-icons/sl';
+import { Link } from 'react-router-dom';
 
 const Van = ({ item, clickHeart }) => {
   return (
     <div className={css.box_card}>
-      <img src="../../images/Car/car1@1x.jpg" alt="car_1" />
-      <div>
-        <div>
-          <h3>{item.name}</h3>
-          <h4>&euro;{item.price.toFixed(2)}</h4>
-          <button type="button" onClick={() => clickHeart(item.id)}>
-            <svg width="24" height="24">
-              <use href={`${icons}#icon-heart`}></use>
+      <img src={item.gallery[0]} alt={item.name} className={css.img_card} />
+      <div className={css.box_desc_card}>
+        <div className={css.header_card}>
+          <h3 className={css.name_card}>{item.name}</h3>
+          <div className={css.box_price_card}>
+            <h4 className={css.name_card}>&euro;{item.price.toFixed(2)}</h4>
+            <button className={css.btn_heart} type="button" onClick={() => clickHeart(item.id)}>
+              <svg width="24" height="24">
+                <use href={`${icons}#icon-heart`}></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div className={css.box_rating_card}>
+          <svg width="16px" height="16px" className={css.icon_star}>
+            <use href={`${icons}#icon-star`}></use>
+          </svg>
+          <Link to="" className={css.reviews_rating}>
+            {item.rating}({item.reviews[0].reviewer_rating} Reviews)
+          </Link>
+          <div className={css.box_location}>
+            <svg width="16px" height="16px" className={css.location_icon}>
+              <use href={`${icons}#icon-map-pin`}></use>
             </svg>
-          </button>
-        </div>
-        <div>
-          <FaStar size={16} />
-          <span>{item.rating}</span>
-          <p>{item.reviews} Reviews</p>
-          <span>
-            <SlLocationPin size={16} />
             {item.location}
-          </span>
+          </div>
         </div>
-        <p>{item.description}</p>
-        <ul>
-          <li>
+        <p className={css.description_card}>{item.description}</p>
+        <ul className={css.box_options_card}>
+          <li className={css.options_card}>
             <svg width="20" height="20">
               <use href={`${icons}#icon-bed`}></use>
             </svg>

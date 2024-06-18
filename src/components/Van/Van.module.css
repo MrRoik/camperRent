@@ -1,0 +1,123 @@
+.box_card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(16, 24, 40, 0.2);
+border-radius: 20px;
+padding: 24px;
+max-height: 358px;
+gap: 24px;
+}
+
+.img_card{
+    width: 290px;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.box_desc_card {
+    display: flex;
+    flex-direction: column;
+}
+
+.header_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block-end: 8px;
+}
+
+.name_card{
+font-weight: 600;
+font-size: 24px;
+line-height: 1.25;
+color: var(--primary-black-color);
+}
+
+.box_price_card{
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+}
+
+.btn_heart{
+    stroke-width: 2.30px;
+stroke: var(--primary-black-color);
+fill: none;
+border: none;
+background-color: transparent;
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn_heart:hover,
+.btn_heart:focus{
+    fill: var(--primary-button-color);
+    stroke: var(--primary-button-color);
+}
+
+.box_rating_card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-block-end: 24px;
+}
+
+.icon_star{
+    margin-inline-end: 4px;
+}
+
+.reviews_rating{
+font-size: 16px;
+line-height: 1.5;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+color: var(--primary-black-color);
+    margin-inline-end: 16px;
+}
+
+.box_location{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+font-size: 16px;
+line-height: 1.5;
+}
+
+.location_icon{
+    stroke: var(--primary-black-color);
+    fill: var(--primary-white-color);
+}
+
+
+.description_card{
+font-size: 16px;
+line-height: 1.5;
+color: var(--primary-grey-color);
+text-overflow: ellipsis;
+width: 525px;
+overflow: hidden;
+white-space: nowrap;
+margin-block-end: 24px;
+}
+
+.box_options_card{
+display: flex;
+flex-wrap: wrap;
+column-gap: 8px;
+justify-content: space-between;
+margin-block-end: 24px;
+}
+
+.options_card{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    padding: 0 18px;
+    height: 44px;
+    background: var(--primary-filter-grey-color);
+mix-blend-mode: multiply;
+}

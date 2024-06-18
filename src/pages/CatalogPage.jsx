@@ -23,7 +23,6 @@ export default function CatalogPage() {
         {loader && <Loader />}
         {error && <ErrorMessage />}
         <CatalogList />
-        <p>This is Catalog car</p>
       </div>
     </main>
   );
